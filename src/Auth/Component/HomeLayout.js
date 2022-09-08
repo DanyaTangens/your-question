@@ -11,7 +11,6 @@ export const HomeLayout = () => {
 
     return (
         <div>
-            <h1>HOME</h1>
             {outlet}
         </div>
     );

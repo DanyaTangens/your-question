@@ -4,9 +4,9 @@ export default function Navbar() {
     return (
         <>
             <nav className="nav">
-                <Link to="/" className="site-title">YourQuestion</Link>
+                <Link to="/account/wall" className="site-title">YourQuestion</Link>
                 <ul>
-                    <CustomLink to="/" url="/">Главная</CustomLink>
+                    <CustomLink to="/account/wall" url="/">Главная</CustomLink>
                     <CustomLink to="/account/message">Сообщения</CustomLink>
                     <CustomLink to="/account/notice">Уведомления</CustomLink>
                     <CustomLink to="/account/friends">Друзья</CustomLink>

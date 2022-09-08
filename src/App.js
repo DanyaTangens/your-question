@@ -7,9 +7,11 @@ import Message from "./Pages/Message";
 import Notice from "./Pages/Notice";
 import Profile from "./Pages/Profile";
 import Friends from "./Pages/Friends";
-import {LoginPage} from "./Pages/Login";
+import LoginPage from "./Pages/Login";
 import {HomeLayout} from "./Auth/Component/HomeLayout";
 import {ProtectedLayout} from "./Auth/Component/ProtectedLayout";
+import SignUp from "./Pages/SignUp";
+import Wall from "./Pages/Wall";
 
 function App() {
     return (
@@ -19,9 +21,11 @@ function App() {
                     <Route element={<HomeLayout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<LoginPage />} />
+                        <Route path="/signup" element={<SignUp />} />
                     </Route>
 
                     <Route path="/account" element={<ProtectedLayout />}>
+                        <Route path="wall" element={<Wall />} />
                         <Route path="message" element={<Message />} />
                         <Route path="notice" element={<Notice />} />
                         <Route path="friends" element={<Friends />} />
