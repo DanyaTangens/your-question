@@ -4,7 +4,7 @@ import {useAuth} from "../Hook/useAuth";
 export const HomeLayout = () => {
     const {user} = useAuth();
     const outlet = useOutlet();
-    console.log(user)
+
     if (user) {
         return <Navigate to="/account/profile" replace/>;
     }
