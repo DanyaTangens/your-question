@@ -98,8 +98,8 @@ export default function LoginPage() {
                             </Button>
                             <Grid container>
                                 <Grid item>
-                                    <Link href="/signup" variant="body2">
-                                        {"Don't have an account? Sign Up"}
+                                    <Link href={"/signup"} variant="body2">
+                                        {"Еще не зарегистрированы? Регистрация"}
                                     </Link>
                                 </Grid>
                             </Grid>

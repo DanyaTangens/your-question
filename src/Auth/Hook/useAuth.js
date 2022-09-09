@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (data) => {
         setUser(data);
-        navigate("/account/profile", { replace: true });
+        navigate("/account/wall", { replace: true });
     };
 
     const logout = () => {
