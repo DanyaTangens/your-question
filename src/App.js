@@ -18,18 +18,18 @@ function App() {
         <>
             <div className="App">
                 <Routes>
-                    <Route element={<HomeLayout />}>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/login" element={<LoginPage />} />
-                        <Route path="/signup" element={<SignUp />} />
+                    <Route element={<HomeLayout/>}>
+                        <Route path="/" element={<Home/>}/>
+                        <Route path="/login" element={<LoginPage/>}/>
+                        <Route path="/signup" element={<SignUp/>}/>
                     </Route>
 
-                    <Route path="/account" element={<ProtectedLayout />}>
-                        <Route path="wall" element={<Wall />} />
-                        <Route path="message" element={<Message />} />
-                        <Route path="notice" element={<Notice />} />
-                        <Route path="friends" element={<Friends />} />
-                        <Route path="profile" element={<Profile />} />
+                    <Route path="/account" element={<ProtectedLayout/>}>
+                        <Route path="wall" element={<Wall/>}/>
+                        <Route path="message" element={<Message/>}/>
+                        <Route path="notice" element={<Notice/>}/>
+                        <Route path="friends" element={<Friends/>}/>
+                        <Route path="profile" element={<Profile/>}/>
                     </Route>
 
                     <Route path="*" element={<NoMatch/>}/>
