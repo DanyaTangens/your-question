@@ -18,7 +18,6 @@ export const ProtectedLayout = () => {
                 component="main"
                 maxWidth="xm"
                 sx={{ width: 2/4 }}
-                style={{backgroundColor: "red"}}
             >
                 {outlet}
             </Container>

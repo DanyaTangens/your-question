@@ -69,6 +69,7 @@ export default function LoginPage() {
                             name="email"
                             autoComplete="email"
                             autoFocus
+                            defaultValue="atuny0"
                         />
                         <TextField
                             margin="normal"
@@ -79,6 +80,7 @@ export default function LoginPage() {
                             type="password"
                             id="password"
                             autoComplete="current-password"
+                            defaultValue="9uQFF1Lh"
                         />
                         <FormControlLabel
                             control={<Checkbox value="remember" color="primary"/>}

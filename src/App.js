@@ -12,6 +12,7 @@ import {HomeLayout} from "./Auth/Component/HomeLayout";
 import {ProtectedLayout} from "./Auth/Component/ProtectedLayout";
 import SignUp from "./Pages/SignUp";
 import Wall from "./Pages/Wall";
+import {ErrorLayout} from "./Auth/Component/ErrorLayout";
 
 function App() {
     return (
@@ -31,8 +32,9 @@ function App() {
                         <Route path="friends" element={<Friends/>}/>
                         <Route path="profile" element={<Profile/>}/>
                     </Route>
-
-                    <Route path="*" element={<NoMatch/>}/>
+                    <Route element={<ErrorLayout/>}>
+                        <Route path="*" element={<NoMatch/>}/>
+                    </Route>Er
                 </Routes>
             </div>
         </>

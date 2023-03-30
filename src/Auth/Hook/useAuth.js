@@ -5,12 +5,27 @@ import { useLocalStorage } from "./useLocalStorage";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useLocalStorage("user", null);
+    const [user, setUser] = useLocalStorage("token", null);
     const navigate = useNavigate();
 
     const login = async (data) => {
-        setUser(data);
-        navigate("/account/wall", { replace: true });
+        fetch('https://dummyjson.com/auth/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                username: data.email,
+                password: data.password,
+            })
+        })
+            .then(response => response.json())
+            .then(function (data) {
+                setUser(data);
+                navigate("/account/wall", { replace: true });
+            })
+            .catch(function (error) {
+                alert(error)
+                setUser(null);
+            })
     };
 
     const logout = () => {
